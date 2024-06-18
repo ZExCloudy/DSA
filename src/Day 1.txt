@@ -1,0 +1,26 @@
+Horizontal scaling Vs Vertical scaling
+
+Vertical:- Adding more RAM or storage etc to single server to make it powerfull
+Pro's:- Simplicity is maintained
+Con's :- You cannot add unlimited RAM or storage to server
+         If one server is down whole system is down
+         \
+Horizontal:- Adding 1 or more server to divide incoming traffic
+Pro's :- if one server is down other servers can take up task without downtime of system
+
+
+Load balancer:-Used to divide traffic between multiple servers
+Pro's :- Because of load balancer in middle client now cannot access server directly
+         Better security
+
+Database Replication:- Use of multiple database for data read/write
+
+Most common method is master-slave:-
+    where single pod of db is considered as master to do all write operations(i.e add,update,delete)
+    and multiple db are used as slave for read operation
+    In case of failure of master any one of the slave is promoted to master by running few scripts without any downtime
+
+    Pro's:-
+    1. Better performance:-  because of multiple databases we can run multiple queries in parrallel
+    2. Reliability:- Due to data replicationif any one server is destroyed due to natural disaster we wont loose any darta
+    3. High avvailability:- Due to multiple db across platform website willl still be functional if db is down by using another db
