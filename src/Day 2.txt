@@ -1,0 +1,15 @@
+Cache:- It's a temporary storage use for storing frequently stored data for faster response time
+
+Cache tier:- a temporary layer to store cached data
+
+Consider when to use cache :-
+
+1. Expiration policy:- Cached data should be expired after certain amount of time that time
+              should not be too less or too much
+
+2. Mitigation failure:- This happend when we only have single cache layer in program so it
+             become single point of failure(SPOF) to remove this add multiple cache layer
+
+3. Consistency:- Cached data should be updated continuously with the db or it can send ambiguous data
+
+4. Eviction policy:- After cache memory is full it should remove data based on FIFO or LFU(Least Frequently Used) data
