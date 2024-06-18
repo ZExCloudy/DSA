@@ -1,0 +1,20 @@
+Content Delivery Network(CDN)
+
+It's geographicallty disposed server to load static content like images videos css javascript etc.
+
+If someone from mumbai hit my web url it will redirect to nearest cdn server to load static content
+and comeback with static pages if that CDN server does not have static content it will load it from origin
+such as amazon s3
+
+Consideration for using CDN:-
+
+1. Cost :- CDN server are run by third party vendors and we are charged for each data sent and recived
+            through them so checking out before will be beneficia;
+2. Data expiry:- Same as cache layer if the data stored in CDN server is too old it can send wrong data to client
+3. CDN fall back:- In case of CDN downtime client/user should be able to load content from origin
+4.Invalidating files: You can remove a file from the CDN before it expires by performing
+  one of the following operations:
+  • Invalidate the CDN object using APIs provided by CDN vendors.
+  • Use object versioning to serve a different version of the object. To version an object,
+  you can add a parameter to the URL, such as a version number. For example, version
+  number 2 is added to the query string: image.png?v=2.
