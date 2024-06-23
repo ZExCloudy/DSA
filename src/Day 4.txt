@@ -1,0 +1,19 @@
+Database Scaling:-
+
+Vertical scaling:- Adding more power to single database like RAM or storage
+ issues:- Single point of failure increased
+            Hardware limits
+            Horizontal scaling is high in cost
+
+
+Horizontal scaling :- Adding more server also known as sharding
+
+Most imp factor for sharding is to select sharding key that will determine how data will be distributed
+Challenges while performing sharding
+
+ 1. Resharding database:- resharding will be required when
+            1. overload of data on one shard due to rapid growth
+            2. Exhaution of shard due to uneven data spread
+
+ 2. Celebrity issue:- If on application like instagarm jeff bezos,virat kohli and many celeb's
+                        data are stored in same shard then that will be overused and failure can happen
